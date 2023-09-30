@@ -1,0 +1,508 @@
+{
+	"info": {
+		"_postman_id": "51d02ddc-7564-4d1a-b283-f0e2419d08ac",
+		"name": "biblioteca",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30102305"
+	},
+	"item": [
+		{
+			"name": "personas",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{url}}/api/personas"
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{url}}/api/personas/1"
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Juan\",\r\n    \"apellido\": \"Perez\",\r\n    \"dni\": 40400400,\r\n    \"domicilio\": {\r\n        \"calle\": \"Rodríguez Peña\",\r\n        \"número\": 993,\r\n        \"localidad\": {\r\n            \"id\": 1,\r\n            \"denominacion\": \"Guaymallén\"\r\n        }\r\n    },\r\n    \"libros\": [\r\n        {\r\n            \"titulo\" : \"Libro Genérico 1\",\r\n            \"fecha\" : 9112020,\r\n            \"genero\": \"Comedia\",\r\n            \"paginas\": 250,\r\n            \"autores\": [\r\n                {\r\n                    \"id\": 1,\r\n                    \"nombre\": \"Fabián\",\r\n                    \"apellido\": \"Ruiz\",\r\n                    \"biografia\": \"Aquí estaría la biografía de Fabián Ruiz... si tuviera una\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"titulo\" : \"Libro Genérico 2\",\r\n            \"fecha\" : 13052016,\r\n            \"genero\": \"Fantasía, Terror\",\r\n            \"paginas\": 332,\r\n            \"autores\": [\r\n                {\r\n                    \"id\": 2,\r\n                    \"nombre\": \"Lorena\",\r\n                    \"apellido\": \"García\",\r\n                    \"biografia\": \"Biografía de Lorena García\"\r\n                },\r\n                {\r\n                    \"id\": 3\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/api/personas"
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"nombre\": \"Juan\",\r\n    \"apellido\": \"Perez\",\r\n    \"dni\": 40400401,\r\n    \"libros\": [\r\n        {\r\n            \"titulo\" : \"Libro Genérico 1\",\r\n            \"fecha\" : 9112020,\r\n            \"genero\": \"Comedia\",\r\n            \"paginas\": 250,\r\n            \"autores\": [\r\n                {\r\n                    \"id\": 1,\r\n                    \"nombre\": \"Fabián\",\r\n                    \"apellido\": \"Ruiz\",\r\n                    \"biografia\": \"Aquí estaría la biografía de Fabián Ruiz... si tuviera una\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"titulo\" : \"Libro Genérico 2\",\r\n            \"fecha\" : 13052016,\r\n            \"genero\": \"Fantasía, Terror\",\r\n            \"paginas\": 332,\r\n            \"autores\": [\r\n                {\r\n                    \"id\": 2,\r\n                    \"nombre\": \"Lorena\",\r\n                    \"apellido\": \"García\",\r\n                    \"biografia\": \"Biografía de Lorena García\"\r\n                },\r\n                {\r\n                    \"id\": 3\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/api/personas/1"
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{url}}/api/personas/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "autores",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{url}}/api/autores"
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{url}}/api/autores/1"
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Fabián\",\r\n    \"apellido\": \"Ruiz\",\r\n    \"biografia\": \"Aquí estaría la biografía de Fabián Ruiz... si tuviera una\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/api/autores"
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"nombre\": \"Fabián\",\r\n    \"apellido\": \"Ruiz Pérez\",\r\n    \"biografia\": \"Aquí estaría la biografía de Fabián Ruiz Pérez... si tuviera una\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/api/autores/1"
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{url}}/api/autores/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "libros",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{url}}/api/libros"
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{url}}/api/libros/1"
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\" : \"Libro Genérico 1\",\r\n    \"fecha\" : 9112020,\r\n    \"genero\": \"Comedia\",\r\n    \"paginas\": 250,\r\n    \"autores\": [\r\n        {\r\n            \"nombre\": \"Fabián\",\r\n            \"apellido\": \"Ruiz\",\r\n            \"biografia\": \"Aquí estaría la biografía de Fabián Ruiz... si tuviera una\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/api/libros"
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"titulo\" : \"Libro Genérico 1 editado\",\r\n    \"fecha\" : 9112020,\r\n    \"genero\": \"Comedia\",\r\n    \"paginas\": 250,\r\n    \"autores\": [\r\n        {\r\n            \"id\": 1,\r\n            \"nombre\": \"Fabián\",\r\n            \"apellido\": \"Ruiz\",\r\n            \"biografia\": \"Aquí estaría la biografía de Fabián Ruiz... si tuviera una\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/api/libros/1"
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{url}}/api/libros/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "localidad",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{url}}/api/localidades"
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{url}}/api/localidades/1"
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"denominacion\": \"Guaymallén\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/api/localidades"
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"denominacion\": \"Las Heras\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/api/localidades/1"
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{url}}/api/localidades/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "domicilios",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{url}}/api/domicilios"
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{url}}/api/domicilios/2"
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"calle\": \"Rodríguez Peña\",\r\n        \"número\": 993,\r\n        \"localidad\": {\r\n            \"id\": 1,\r\n            \"denominacion\": \"Guaymallén\"\r\n        }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/api/domicilios"
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"calle\": \"Rodríguez Peña\",\r\n        \"número\": 993,\r\n        \"localidad\": {\r\n            \"id\": 1,\r\n            \"denominacion\": \"Guaymallén\"\r\n        }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/api/domicilios/1"
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{url}}/api/domicilios/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Carga de Ejemplo",
+			"item": [
+				{
+					"name": "create localidad Guaymallén",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"denominacion\": \"Guaymallén\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/api/localidades"
+					},
+					"response": []
+				},
+				{
+					"name": "create localidad Las Heras",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"denominacion\": \"Las Heras\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/api/localidades"
+					},
+					"response": []
+				},
+				{
+					"name": "create autor Fabián",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Fabián\",\r\n    \"apellido\": \"Ruiz\",\r\n    \"biografia\": \"Aquí estaría la biografía de Fabián Ruiz... si tuviera una\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/api/autores"
+					},
+					"response": []
+				},
+				{
+					"name": "create autor Lorena",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Lorena\",\r\n    \"apellido\": \"García\",\r\n    \"biografia\": \"Biografía de Lorena García\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/api/autores"
+					},
+					"response": []
+				},
+				{
+					"name": "create autor Francisco",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Francisco\",\r\n    \"apellido\": \"Fernández\",\r\n    \"biografia\": \"Biografía de Francisco Fernández\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/api/autores"
+					},
+					"response": []
+				},
+				{
+					"name": "create persona Juan",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Juan\",\r\n    \"apellido\": \"Perez\",\r\n    \"dni\": 40400400,\r\n    \"domicilio\": {\r\n        \"calle\": \"Rodríguez Peña\",\r\n        \"número\": 993,\r\n        \"localidad\": {\r\n            \"id\": 1,\r\n            \"denominacion\": \"Guaymallén\"\r\n        }\r\n    },\r\n    \"libros\": [\r\n        {\r\n            \"titulo\" : \"Libro Genérico 1\",\r\n            \"fecha\" : 9112020,\r\n            \"genero\": \"Comedia\",\r\n            \"paginas\": 250,\r\n            \"autores\": [\r\n                {\r\n                    \"id\": 1\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"titulo\" : \"Libro Genérico 2\",\r\n            \"fecha\" : 13052016,\r\n            \"genero\": \"Fantasía, Terror\",\r\n            \"paginas\": 332,\r\n            \"autores\": [\r\n                {\r\n                    \"id\": 2\r\n                },\r\n                {\r\n                    \"id\": 3\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/api/personas"
+					},
+					"response": []
+				},
+				{
+					"name": "create persona Pedro",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Pedro\",\r\n    \"apellido\": \"Parker\",\r\n    \"dni\": 20200200,\r\n    \"domicilio\": {\r\n        \"calle\": \"Olascoaga\",\r\n        \"número\": 110,\r\n        \"localidad\": {\r\n            \"id\": 2,\r\n            \"denominacion\": \"Las Heras\"\r\n        }\r\n    },\r\n    \"libros\": [\r\n        {\r\n            \"titulo\" : \"Libro Genérico 3\",\r\n            \"fecha\" : 21062019,\r\n            \"genero\": \"Romance\",\r\n            \"paginas\": 881,\r\n            \"autores\": [\r\n                {\r\n                    \"id\": 3\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/api/personas"
+					},
+					"response": []
+				}
+			],
+			"description": "Ejecutar todos los request de esta carpeta en orden para realizar una carga de ejemplo a la base de datos."
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://biblioteca-1if1.onrender.com"
+		}
+	]
+}
