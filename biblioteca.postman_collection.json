@@ -28,6 +28,142 @@
 					"response": []
 				},
 				{
+					"name": "get Query Method",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/personas/buscarPorNombreQueryMethod?nombre=r&page=0&size=1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"personas",
+								"buscarPorNombreQueryMethod"
+							],
+							"query": [
+								{
+									"key": "nombre",
+									"value": "r"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get JPQL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/personas/buscarPorNombreJPQL?nombre=r&page=0&size=1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"personas",
+								"buscarPorNombreJPQL"
+							],
+							"query": [
+								{
+									"key": "nombre",
+									"value": "r"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get Native",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/personas/buscarPorNombreNative?nombre=r&page=0&size=1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"personas",
+								"buscarPorNombreNative"
+							],
+							"query": [
+								{
+									"key": "nombre",
+									"value": "r"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get por cantidad de libros",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/personas/buscarPorCantLibros?min=1&max=2&page=0&size=10",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"personas",
+								"buscarPorCantLibros"
+							],
+							"query": [
+								{
+									"key": "min",
+									"value": "1"
+								},
+								{
+									"key": "max",
+									"value": "2"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "create",
 					"request": {
 						"method": "POST",
@@ -474,6 +610,24 @@
 						"url": "{{url}}/api/personas"
 					},
 					"response": []
+				},
+				{
+					"name": "create persona Ana María",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Ana María\",\r\n    \"apellido\": \"Ruiz\",\r\n    \"dni\": 32905390,\r\n    \"domicilio\": {\r\n        \"calle\": \"Elpidio Gonzalez\",\r\n        \"número\": 110,\r\n        \"localidad\": {\r\n            \"id\": 1,\r\n            \"denominacion\": \"Guaymallén\"\r\n        }\r\n    },\r\n    \"libros\": [\r\n        {\r\n            \"titulo\" : \"Libro Genérico 4\",\r\n            \"fecha\" : 10102010,\r\n            \"genero\": \"Ciencia Ficción\",\r\n            \"paginas\": 324,\r\n            \"autores\": [\r\n                {\r\n                    \"id\": 1\r\n                },\r\n                {\r\n                    \"id\": 2\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/api/personas"
+					},
+					"response": []
 				}
 			],
 			"description": "Ejecutar todos los request de esta carpeta en orden para realizar una carga de ejemplo a la base de datos."
@@ -502,7 +656,7 @@
 	"variable": [
 		{
 			"key": "url",
-			"value": "https://biblioteca-1if1.onrender.com"
+			"value": "http://localhost:8084"
 		}
 	]
 }
