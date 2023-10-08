@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.utn.biblioteca.archunit.ArchUnitTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2023-10-08T13:42:59" hostname="LAPTOP-7JH2IT60" time="2.716">
+  <properties/>
+  <testcase name="layerRule" classname="com.utn.biblioteca.archunit.ArchUnitTest" time="2.69"/>
+  <testcase name="controllerNameRule" classname="com.utn.biblioteca.archunit.ArchUnitTest" time="0.001"/>
+  <testcase name="controllerBaseRule" classname="com.utn.biblioteca.archunit.ArchUnitTest" time="0.002"/>
+  <testcase name="serviceNameRule" classname="com.utn.biblioteca.archunit.ArchUnitTest" time="0.001"/>
+  <testcase name="serviceBaseRule" classname="com.utn.biblioteca.archunit.ArchUnitTest" time="0.002"/>
+  <testcase name="repositoryNameRule" classname="com.utn.biblioteca.archunit.ArchUnitTest" time="0.001"/>
+  <testcase name="repositoryBaseRule" classname="com.utn.biblioteca.archunit.ArchUnitTest" time="0.002"/>
+  <testcase name="entitiesAnotationRule" classname="com.utn.biblioteca.archunit.ArchUnitTest" time="0.008"/>
+  <system-out><![CDATA[10:42:59.162 [Test worker] INFO com.tngtech.archunit.core.PluginLoader -- Detected Java version 18.0.1.1
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
